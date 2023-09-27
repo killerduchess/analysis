@@ -3,5 +3,5 @@ npm modules to be installed
 - express
 - mongoose
 - path
-- mothod-override
+- method-override
 - ejs-mate
