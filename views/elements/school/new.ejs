@@ -1,0 +1,70 @@
+<%layout('layouts/boilerplate.ejs')%>
+<div class="row editpage p-2" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">
+    <h1 class="text-center mb-3 pt-4" style="color: white;"><strong>New School Registration</strong></h1>
+    <div class="col-6 offset-3">
+        <form action="/studentportal/school" method="post">
+            <section style="display: flex; width: 30rem; justify-content: space-between;">
+            <div class="mb-3">
+            <label class="form-label" for="schoolid" style="color: white;"><strong>School UDISE ID</strong></label>
+            <input class='form-control glass' type="number" name="schoolid" id="schoolid" required>
+            </div>
+            <div>
+                <label class="form-label" for="password" style="color: white;"><strong>Password</strong></label>
+                <input class="form-control glass" type="password" name="password" id="password" minlength="8" required >
+                </div>
+        </section>
+
+        <section style="display: flex; width: 30rem; justify-content: space-between;">
+            <div class="mb-3">
+                <label class="form-label" for="schoolboard" style="color: white;"><strong>School Board</strong></label>
+                <select id="schoolboard" name="schoolboard" class="form-control glass" required>
+                    <option value="cbse">cbse</option>
+                    <option value="icse">icse</option>
+                    <option value="stateboard">stateboard</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="schoolname" style="color: white;"><strong>School Name</strong></label>
+                <input class="form-control glass" type="text" name="schoolname" id="schoolname" required>
+                </div>
+
+            
+            </section>
+
+            <section style="display: flex; width: 30rem; justify-content: space-between;">
+                
+                <div class="mb-3">
+                    <label class="form-label" for="schoolmedium" style="color: white;"><strong>School Medium</strong></label>
+                    <select id="schoolmedium" name="schoolmedium" class="form-control glass" required>
+                        <option value="english">english</option>
+                        <option value="hindi">hindi</option>
+                        <option value="gujarati">gujarati</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="pincode" style="color: white;"><strong>Area Pincode</strong></label>
+                    <input class="form-control glass" type="number" name="pincode" id="pincode" required>
+                </div>                
+            </section>
+
+            <section style="display: flex; width: 30rem; justify-content: space-between;">
+            <div class="mb-3">
+                <label class="form-label" for="schooltype" style="color: white;"><strong>School Type</strong></label>
+                <select id="schooltype" name="schooltype" class="form-control glass" required>
+                    <option value="government">gov</option>
+                    <option value="private">private</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="schoolcity" style="color: white;"><strong>School City</strong></label>
+                <input class="form-control glass" type="text" name="schoolcity" id="schoolcity" required>
+            </div>
+            </section>
+
+            <button class="btn mt-3 mb-3" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); color: white;"><strong>Register School</strong></button>
+        </form>
+        <div><a class="btn glass text-white mt-3 mb-5" href="/studentportal">Back to Home</a></div>
+    </div>
+</div>

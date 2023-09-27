@@ -1,0 +1,19 @@
+<%layout('layouts/boilerplate.ejs')%>
+<%for(school of schools) {%>
+        <div class="card m-3 p-3 border-3 glass" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">
+            <div class="card-header"  style="color: white; text-transform: uppercase;">
+                <h3>School Name - <%=school.schoolname%></h3>
+            </div>
+            <div class="card-body">
+              <p class="card-text" style="color: white; text-transform: uppercase;">UDISE - <%= school.schoolid %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">Pincode - <%= school.pincode %></p>
+            </div>
+            <a href="/studentportal/school/<%=school._id%>/student" class="btn glass text-white me-3" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">Show Students</a>
+        </div>
+        <%}%>
+        <div><a class="btn glass text-white mt-3 mb-5" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;" href="/studentportal">Back to Home</a></div>
+        
+        <py-script src="data.py"></py-script>
+
+        <!-- mongoexport -d=analysissignup -c=schools --type=csv --fields=schoolname,schoolid,pincode,schooltype,schoolmedium,schoolboard,schoolcity --out=school.csv -->
+        <!-- mongoimport -d=analysissignup -c=schools --type=csv --file=C:\Users\omart\Desktop\GitHub\web_development\analysis\schools.csv --headerline -->

@@ -1,0 +1,21 @@
+<%layout('layouts/boilerplate.ejs')%>
+<div class="row editpage mt-5 p-2" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">
+    <h1 class="text-center mb-3 pt-4" style="color: white;"><strong>Admin Login</strong></h1>
+    <div class="col-6 offset-3">
+        <form action="/studentportal/admin/login" method="post">
+            <section style="display: flex; width: 30rem; justify-content: space-between;">
+            <div class="mb-3">
+            <label class="form-label" for="username" style="color: white;"><strong>Admin Username</strong></label>
+            <input class='form-control glass' type="text" name="username" id="username" required>
+            </div>
+            <div>
+                <label class="form-label" for="password" style="color: white;"><strong>Password</strong></label>
+                <input class="form-control glass" type="password" name="password" id="password" minlength="8" required >
+                </div>
+        </section>
+
+            <button class="btn mt-3 mb-3" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); color: white;"><strong>Login</strong></button>
+        </form>
+        <div><a class="btn glass text-white mt-3 mb-5" href="/studentportal">Back to Home</a></div>
+    </div>
+</div>

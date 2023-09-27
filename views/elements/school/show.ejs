@@ -1,0 +1,19 @@
+<%layout('layouts/boilerplate.ejs')%>
+    <h1 class="mt-n1 mb-5 text-center"><%=foundSchool.schoolname%></h1>
+        <div class="card m-3 p-3 border-3 glass" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">
+            <div class="card-header"  style="color: white; text-transform: uppercase;">
+                <h3>UDISE ID - <%=foundSchool.schoolid%></h3>
+            </div>
+            <div class="card-body">
+              <p class="card-text" style="color: white; text-transform: uppercase;">Pincode - <%= foundSchool.pincode %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">School Type - <%= foundSchool.schooltype %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">School Medium - <%= foundSchool.schoolmedium %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">School Board - <%= foundSchool.schoolboard %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">School City - <%= foundSchool.schoolcity %></p>
+              <div class="d-inline">
+                <a href="/studentportal/school/<%=foundSchool._id%>/student" class="btn glass text-white me-3" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">Show Students</a>
+                <a href="/studentportal/school/<%=foundSchool._id%>/student/new" class="btn glass text-white me-3" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">Add New Student</a>
+            </div>
+            </div>
+        </div>
+        <div><a class="btn glass text-white mt-3 mb-5" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;" href="/studentportal">Back to Home</a></div>

@@ -1,0 +1,23 @@
+<%layout('layouts/boilerplateForLogin.ejs')%>
+    <div class="row editpage mt-3">
+        <h1 class="text-center mb-3">Login</h1>
+        <div class="col-6 offset-3">
+            <form action="/loginHeartstone" method="post">
+                <div class="mb-3">
+                    <label class="form-label"  for="username">Username</label>
+                    <input class='form-control glass' type="text" name="username" id="username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"  for="email">Email</label>
+                    <input class='form-control glass' type="email" name="email" id="email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"  for="password">Password</label>
+                    <input class='form-control glass' type="password" name="password" id="password">
+                </div>
+                <div class="mb-3">
+                    <button class="btn glass btn-purple:hover text-white mt-3 mb-3">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>

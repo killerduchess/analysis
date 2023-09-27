@@ -1,0 +1,25 @@
+<%layout('layouts/boilerplate.ejs')%>
+<%for(student of students) {%>
+        <div class="card m-3 p-3 border-3 glass" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">
+            <div class="card-header"  style="color: white; text-transform: uppercase;">
+                <h3>Student Name - <%=student.studentname%></h3>
+            </div>
+            <div class="card-body">
+              <p class="card-text" style="color: white; text-transform: uppercase;">AADHAR UID - <%= student.aadharuid %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">School ID - <%= student.schoolid %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">Status - <%= student.status %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">date of birth - <%= student.dob %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">age - <%= student.age %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">gender - <%= student.gender %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">religion - <%= student.religion%></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">caste- <%= student.caste %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">session - <%= student.session %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">Family income - <%= student.familyincome %></p>
+              <p class="card-text" style="color: white; text-transform: uppercase;">pwd - <%= student.pwd %></p>
+              <div class="d-inline">
+              <a href="/studentportal/school/<%=foundSchool._id%>/student/<%=student._id%>/edit" class="btn glass text-white me-3" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">Edit Student Status</a>
+            </div>
+            </div>
+        </div>
+        <%}%>
+        <div><a class="btn glass text-white mt-3 mb-5" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;" href="/studentportal">Back to Home</a></div>

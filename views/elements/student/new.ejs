@@ -1,0 +1,109 @@
+<%layout('layouts/boilerplate.ejs')%>
+<div class="row editpage p-2" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); border-radius: 50px;">
+    <h1 class="text-center mb-3 pt-4" style="color: white;"><strong>New Student of <%=foundSchool.schoolname%></strong></h1>
+    <div class="col-6 offset-3">
+        <form action="/studentportal/school/<%=foundSchool._id%>/student" method="post">
+
+            <section style="display: flex; width: 30rem; justify-content: space-between;">
+
+            <div class="mb-3">
+            <label class="form-label" for="studentname" style="color: white;"><strong>Student Name</strong></label>
+            <input class='form-control glass' type="text" name="studentname" id="studentname" required>
+            </div>
+
+            <div>
+                <label class="form-label" for="aadharuid" style="color: white;"><strong>AADHAR UID</strong></label>
+                <input class="form-control glass" type="number" name="aadharuid" id="aadharuid" minlength="12" required >
+                </div>
+        </section>
+
+        <section style="display: flex; width: 30rem; justify-content: space-between;">
+
+            <div class="mb-3">
+            <label class="form-label" for="dob" style="color: white;"><strong>Date of Birth</strong></label>
+            <input class='form-control glass' type="text" name="dob" id="dob" required>
+            </div>
+
+            <div>
+                <label class="form-label" for="age" style="color: white;"><strong>Age</strong></label>
+                <input class="form-control glass" type="number" name="age" id="age" required >
+                </div>
+        </section>
+
+        <section style="display: flex; width: 30rem; justify-content: space-between;">
+
+            <div class="mb-3">
+            <label class="form-label" for="class" style="color: white;"><strong>Current Class</strong></label>
+            <input class='form-control glass' type="number" name="class" id="class" min="1" max="12" required>
+            </div>
+
+            <div>
+                <label class="form-label" for="session" style="color: white;"><strong>Session</strong></label>
+                <input class="form-control glass" type="number" name="session" id="session" minlength="4" maxlength="4" required >
+                </div>
+        </section>
+
+        <section style="display: flex; width: 30rem; justify-content: space-between;">
+
+            <div class="mb-3">
+                <label class="form-label" for="status" style="color: white;"><strong>Status</strong></label>
+                <select id="status" name="status" class="form-control glass" required>
+                    <option value="active">active</option>
+                    <option value="inactive">inactive</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="gender" style="color: white;"><strong>Gender</strong></label>
+                <select id="gender" name="gender" class="form-control glass" required>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+            </div>
+        </section>
+
+        <section style="display: flex; width: 30rem; justify-content: space-between;">
+
+            <div class="mb-3">
+                <label class="form-label" for="religion" style="color: white;"><strong>Religion</strong></label>
+                <select id="religion" name="religion" class="form-control glass" required>
+                    <option value="hindu">hindu</option>
+                    <option value="muslim">muslim</option>
+                    <option value="christian">christian</option>
+                    <option value="sikh">sikh</option>
+                    <option value="buddhism">buddhism</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="caste" style="color: white;"><strong>Caste</strong></label>
+                <select id="caste" name="caste" class="form-control glass" required>
+                    <option value="gen">gen</option>
+                    <option value="obc">obc</option>
+                    <option value="sc">sc</option>
+                    <option value="st">st</option>
+                </select>
+            </div>
+        </section>
+
+        <section style="display: flex; width: 30rem; justify-content: space-between;">
+
+            <div class="mb-3">
+                <label class="form-label" for="pwd" style="color: white;"><strong>PWD</strong></label>
+                <select id="pwd" name="pwd" class="form-control glass" required>
+                    <option value="yes">yes</option>
+                    <option value="no">no</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="form-label" for="familyincome" style="color: white;"><strong>Family Income</strong></label>
+                <input class="form-control glass" type="number" name="familyincome" id="familyincome" min="36000" required >
+                </div>
+        </section>
+
+            <button class="btn mt-3 mb-3" style="background: linear-gradient(325.27deg, #019633 3.12%, rgba(247, 147, 30, 0.96) 61.51%); color: white;"><strong>Register Student</strong></button>
+        </form>
+        <div><a class="btn glass text-white mt-3 mb-5" href="/studentportal">Back to Home</a></div>
+    </div>
+</div>
